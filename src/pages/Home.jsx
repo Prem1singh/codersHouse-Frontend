@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 const Home = () => {
   const navigator=useNavigate();
   function onclickHandler(){
-      navigator('//register');
+      navigator('/register');
   }
   return (
     <div className='flex items-center justify-center h-[85vh] '><Card title="Welcome to Codershouse!" logo="./logo.png">
