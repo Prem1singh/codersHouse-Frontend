@@ -1,7 +1,7 @@
 import axios, { toFormData } from 'axios'
 import { useId } from 'react';
 const api = axios.create({
-  baseURL: 'http://localhost:5300',
+  baseURL: 'https://codershouse-backend.vercel.app',
   withCredentials: true,
   headers: {
     'Content-type': 'application/json',
@@ -39,7 +39,7 @@ api.interceptors.response.use(
       originalRequest._isRetry = true;
       try {
         await axios.get(
-          `http://localhost:5300/auth/token/refresh`,
+          `https://codershouse-backend.vercel.app`,
           {
             withCredentials: true,
           }
