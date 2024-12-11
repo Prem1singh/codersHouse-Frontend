@@ -22,7 +22,7 @@ const Auth = () => {
       })
     },[])
   return (
-    (!user?<Navigate to={'/noAuth'}/>:!user?.Activated?<Navigate to={'/semiAuth/verify'}/>:<Outlet/>)
+    (!user?<Navigate to={'/'}/>:!user?.Activated?<Navigate to={'/semiAuth/verify'}/>:<Outlet/>)
   )
 }
 

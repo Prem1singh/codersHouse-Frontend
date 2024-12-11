@@ -6,7 +6,7 @@ function SemiAuth() {
     const {user}=useContext(context);
     console.log(user);
   return (
-    !user?<Navigate to={'/noAuth/register'}/>:user?.Activated?<Navigate to={'/auth/rooms'}/>:<Outlet/>
+    !user?<Navigate to={'//register'}/>:user?.Activated?<Navigate to={'/auth/rooms'}/>:<Outlet/>
   )
 }
 

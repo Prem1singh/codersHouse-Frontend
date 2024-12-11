@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import Register from './pages/Register'
 
 import { SingleRoom } from './pages/SingleRoom'
-import NoAuth from './pages/Layouts/NoAuth'
+import NoAuth from './pages/Layouts/noAuth'
 import Auth from './pages/Layouts/Auth'
 import Verify from './pages/Verify'
 import SemiAuth from './pages/Layouts/SemiAuth'
@@ -17,7 +17,7 @@ const routes = createBrowserRouter([
     path: '',
     element: <Root />,
     children: [{
-      path: '/noAuth',
+      path: '/',
       element: <NoAuth />,
       children: [{
         path: "",

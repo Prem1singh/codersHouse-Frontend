@@ -21,7 +21,7 @@ export default function Avatar() {
             }
           }else{
             setUser(null);
-            navigator('/noAuth');
+            navigator('/');
           }
           
         })
