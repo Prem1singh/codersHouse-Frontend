@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react'
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import { context } from '../../Context/context';
+import { context } from '../../Context/Context';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'

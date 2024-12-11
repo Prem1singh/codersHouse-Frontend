@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { context } from '../Context/Context'
-import Phone from './Register/phone';
+import Phone from './Register/Phone';
 import Verified from './Register/Verified';
 const Steps={
     0:<Phone/>,
