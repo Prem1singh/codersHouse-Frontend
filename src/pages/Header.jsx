@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { context } from '../Context/context'
+import { context } from '../Context/Context'
 import { IoMdExit } from "react-icons/io";
 import { logout } from '../http';
 

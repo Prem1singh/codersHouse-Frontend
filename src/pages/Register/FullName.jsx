@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react'
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import  { context } from '../../Context/context';
+import  { context } from '../../Context/Context';
 
 export default function FullName() {
     const inpRef=useRef()

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import  { context } from '../../Context/context';
+import  { context } from '../../Context/Context';
 export default function Username() {
     const {registerNumber,setRegisterNumber}=useContext(context);
     function clickHandler(){

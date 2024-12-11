@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { getSingleRoom, leaveRoom } from '../http';
-import { context } from '../Context/context';
+import { context } from '../Context/Context';
 
 export const SingleRoom = () => {
     const navigator = useNavigate();

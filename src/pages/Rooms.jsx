@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { createRoom, getRooms, joinRoom } from '../http'
-import { context } from '../Context/context'
+import { context } from '../Context/Context'
 
 export const Rooms = () => {
     const {user,rooms,setRooms,baseUrl,roomId,setRoomId}=useContext(context)

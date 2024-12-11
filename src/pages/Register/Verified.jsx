@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react'
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import  { context } from '../../Context/context';
+import  { context } from '../../Context/Context';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ToastContainer } from 'react-toastify';

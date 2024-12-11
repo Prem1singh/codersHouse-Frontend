@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Header from './pages/Header';
 import { Outlet } from 'react-router-dom';
-import { context } from './Context/context';
+import { context } from './Context/Context';
 import { getRooms, getUsers } from './http';
 
 const Root = () => {

@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react'
 import Card from '../../components/Card';
 import Button from '../../components/Button';
-import  { context } from '../../Context/context';
+import  { context } from '../../Context/Context';
 import axios from 'axios'
 import { profileVerify } from '../../http';
 export default function Avatar() {

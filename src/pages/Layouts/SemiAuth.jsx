@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Navigate, Outlet } from 'react-router-dom';
-import { context } from '../../Context/context';
+import { context } from '../../Context/Context';
 
 function SemiAuth() {
     const {user}=useContext(context);

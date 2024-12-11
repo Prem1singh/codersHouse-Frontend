@@ -4,7 +4,7 @@ import FullName from './Register/FullName'
 import Avatar from './Register/Avatar'
 import Username from './Register/Username'
 import Activation from './Register/Activation'
-import { context } from '../Context/context'
+import { context } from '../Context/Context'
 const Steps={
  
     0:<FullName/>,

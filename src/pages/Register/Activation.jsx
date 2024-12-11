@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Card from '../../components/Card';
-import { context } from '../../Context/context';
+import { context } from '../../Context/Context';
 import { useNavigate } from 'react-router-dom';
 
 export default function Activation() {

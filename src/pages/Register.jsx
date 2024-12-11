@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { context } from '../Context/context'
+import { context } from '../Context/Context'
 import Phone from './Register/phone';
 import Verified from './Register/Verified';
 const Steps={
