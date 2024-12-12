@@ -10,6 +10,7 @@ const Header = () => {
     logout()
     .then((success)=>{
       if(success.data.status==1){
+        console.log(success)
         setUser(null)
       }
     })
@@ -24,7 +25,7 @@ const Header = () => {
         </Link>
         {
         
-          user?.Activated?<div className='flex gap-4 items-center'>{ user.fullName} <img className='h-[30px] w-[30px] rounded-full border-2 border-blue-500' src={`${user.Avatar}`} alt="" /> <IoMdExit onClick={logoutHandler} className='text-[25px] cursor-pointer' /></div>:''
+          user?.Activated?<div className='flex gap-4 items-center'><span className=' hidden md:block'>{ user.fullName}</span> <img className='h-[30px] w-[30px] rounded-full border-2 border-blue-500' src={`${user.Avatar}`} alt="" /> <IoMdExit onClick={logoutHandler} className='text-[25px] cursor-pointer' /></div>:''
         
           
         }

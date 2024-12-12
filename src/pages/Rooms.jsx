@@ -101,7 +101,7 @@ export const Rooms = () => {
                         const member = (room.listners ? room.listners.length + room.speakers.length : room.speakers.length)
 
                         return (
-                            <div onClick={() => { join(room._id) }} key={room._id} className='relative w-[80vw] mx-auto md:w-[250px] h-[170px] bg-[#1D1D1D] rounded-2xl p-3 cursor-pointer'>
+                            <div onClick={() => { join(room._id) }} key={room._id} className='relative w-[80vw] mx-auto md:mx-0 md:w-[250px] h-[170px] bg-[#1D1D1D] rounded-2xl p-3 cursor-pointer'>
                                 <p>{room.name}</p>
                                 <div className='mt-[10px]'>
                                     <div className='relative'>
