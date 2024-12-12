@@ -48,7 +48,7 @@ export default function Verified() {
   return (
     <Card register='true' title="Enter the code we just texted you" logo="/lock.png">
       <ToastContainer/>
-    <div className='mt-6 relative w-[230px] mx-auto  mb-[15px]' >
+    <div className='mt-6relative w-full md:w-[230px] md:mx-auto  mb-[15px]' >
     <input ref={OtpRef} type="text" name="" id="" className=' bg-[#262626] px-4 py-1 ps-[20px] rounded-lg focus-visible:outline-none'/></div>
     <Button onClick={clickHandler}>Next</Button>
     <p className='mt-[15px] text-[#C4C5C5] text-[12px]'>Didn’t receive? Tap to resend</p>
