@@ -33,7 +33,6 @@ function Phone() {
             // }
             sendOtp(EmailRef.current.value)
                 .then((success) => {
-                    console.log(success.data)
                     setAuthInfo(success.data)
                     if (success.data.status) {
                         setRegisterNumber(registerNumber + 1);

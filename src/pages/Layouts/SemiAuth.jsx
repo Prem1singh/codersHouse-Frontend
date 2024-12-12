@@ -4,7 +4,6 @@ import { context } from '../../Context/Context';
 
 function SemiAuth() {
     const {user}=useContext(context);
-    console.log(user);
   return (
     !user?<Navigate to={'//register'}/>:user?.Activated?<Navigate to={'/auth/rooms'}/>:<Outlet/>
   )

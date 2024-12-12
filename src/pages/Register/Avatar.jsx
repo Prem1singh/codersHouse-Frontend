@@ -13,7 +13,6 @@ export default function Avatar() {
       formData.append('FullName', fullName);
         profileVerify(formData)
         .then((success) => {
-          console.log(success);
           if(success.data.status==1){
             setUser(success.data.user);
             if(success.data.user.Activated==true){

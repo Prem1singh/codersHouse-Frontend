@@ -26,9 +26,9 @@ export const SingleRoom = () => {
             .then((success) => {
                 if (success.data.status == 1) {
                     setSingleRoom(success.data.singleRoom);
-                    console.log(success.data.singleRoom)
+                    
                 } else {
-                    console.log('status problem')
+                   
                 }
 
             })

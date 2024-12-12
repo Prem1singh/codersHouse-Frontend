@@ -22,8 +22,8 @@ const Root = () => {
       })
       .catch((err)=>{
         setLoader(false)
-        console.log(err.message)
-        // console.log(err.message)
+
+
       })
       
     },[])
@@ -33,7 +33,7 @@ const Root = () => {
         setRooms(success.data.rooms)
       })
       .catch((err)=>{
-        console.log(err.message)
+
       })
     },[])
   return (

@@ -96,9 +96,8 @@ export const Rooms = () => {
             <div className='flex max-w-[90vw] mx-auto px-4 py-7 flex-wrap gap-2 '>
                 {
                     rooms.map((room)=>{
-                        console.log(room.listners)
+                       
                         const member=(room.listners?room.listners.length+room.speakers.length:room.speakers.length)
-                        console.log(member)
 
                         return(
                             <div onClick={()=>{join(room._id)}} key={room._id}  className='relative w-[250px] h-[170px] bg-[#1D1D1D] rounded-2xl p-3 cursor-pointer'>
