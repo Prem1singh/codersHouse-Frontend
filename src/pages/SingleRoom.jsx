@@ -61,7 +61,7 @@ export const SingleRoom = () => {
             </div>
 
             <div className='mt-10 w-full min-h-[77vh] p-7 bg-[#202020]'>
-                <div className='flex justify-between'><div className='font-bold'>{singleRoom.name}</div><div className='flex items-center gap-5 me-10'><img src="/hand.png" onClick={speak} className='p-3 px-4 bg-[#2d2d2d] rounded-full cursor-pointer' alt="" /><div className='flex gap-3 items-center p-3 px-5 bg-[#2d2d2d] rounded-full font-bold cursor-pointer' onClick={back}><img src="/leave.png" alt="" />Leave quietly</div></div></div>
+                <div className='flex w-[100vw] md:w-full mx-auto justify-between items-center mb-10'><div className='font-bold'>{singleRoom.name}</div><div className='flex items-center gap-5 me-10'><img src="/hand.png" onClick={speak} className='p-3 px-4 bg-[#2d2d2d] rounded-full cursor-pointer' alt="" /><div className='flex gap-3 items-center p-3 px-5 bg-[#2d2d2d] rounded-full font-bold cursor-pointer' onClick={back}><img src="/leave.png" alt="" />Leave quietly</div></div></div>
                 <div className='flex gap-4 items-center flex-wrap mt-3 mb-6'>{singleRoom?.speakers?.map((sp, i) => {
                     
                     return (
