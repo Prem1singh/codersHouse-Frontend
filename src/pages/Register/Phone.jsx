@@ -7,51 +7,51 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import { sendOtp } from '../../http';
 function Phone() {
-    const [email, setEmail] = useState(false);
-    const { registerNumber, setRegisterNumber ,setAuthInfo,notify} = useContext(context);
-    const PhoneRef=useRef();
-  
+    const [email, setEmail] = useState(true);
+    const { registerNumber, setRegisterNumber, setAuthInfo, notify } = useContext(context);
+    const PhoneRef = useRef();
+
     function clickHandler() {
         if (registerNumber < 1) {
-          
-          if(!PhoneRef.current.value){
-            notify(0,"Please Enter Mobile Number ");
-            return;
-          }
-          const result=PhoneRef.current.value-1;
-          
-         
-          if(!result){
-            notify(0,"Only Numbers are allowed");
-            return;
-          }
-         
-          if((PhoneRef.current.value).length!=10){
-            notify(0,"Mobile number should be on 10 digit");
-            return;
-          }
+
+            if (!PhoneRef.current.value) {
+                notify(0, "Please Enter Mobile Number ");
+                return;
+            }
+            const result = PhoneRef.current.value - 1;
+
+
+            if (!result) {
+                notify(0, "Only Numbers are allowed");
+                return;
+            }
+
+            if ((PhoneRef.current.value).length != 10) {
+                notify(0, "Mobile number should be on 10 digit");
+                return;
+            }
             sendOtp(PhoneRef.current.value)
-            .then((success)=>{
-                console.log(success.data)
-                setAuthInfo(success.data)
-                if(success.data.status){
-                         setRegisterNumber(registerNumber + 1);
-                }
-               
-                notify(success.data.status,success.data.msg);
-                PhoneRef.current.value='';
-                
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
-            
+                .then((success) => {
+                    console.log(success.data)
+                    setAuthInfo(success.data)
+                    if (success.data.status) {
+                        setRegisterNumber(registerNumber + 1);
+                    }
+
+                    notify(success.data.status, success.data.msg);
+                    PhoneRef.current.value = '';
+
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+
         }
     }
 
     return (
         <div>
-             <ToastContainer />
+            <ToastContainer />
             {email == false ? <Card register='true' title="Enter you phone number" logo="/phone.png">
                 <div className='flex absolute top-[-60px] right-[20px] gap-2 '>
                     <div onClick={() => { setEmail(false) }} className={`p-2 flex items-center justify-center rounded-lg cursor-pointer ${email ? 'bg-[#262626]' : 'bg-[#0077FF]'}`}>
