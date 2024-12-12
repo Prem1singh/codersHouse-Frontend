@@ -1,7 +1,7 @@
 import axios, { toFormData } from 'axios'
 import { useId } from 'react';
 const api = axios.create({
-  baseURL: 'https://codershouse-backend.vercel.app',
+  baseURL: 'https://codershouse-backend.vercel.app/',
   withCredentials: true,
   headers: {
     'Content-type': 'application/json',
@@ -32,14 +32,14 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
     if (
-      error.response.status === 401 &&
+      error.response?.status === 401 &&
       originalRequest &&
       !originalRequest._isRetry
     ) {
       originalRequest._isRetry = true;
       try {
         await axios.get(
-          `https://codershouse-backend.vercel.app`,
+          `https://codershouse-backend.vercel.app/`,
           {
             withCredentials: true,
           }

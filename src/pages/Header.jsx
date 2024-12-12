@@ -24,7 +24,7 @@ const Header = () => {
         </Link>
         {
         
-          user?.Activated?<div className='flex gap-4 items-center'>{ user.fullName} <img className='h-[30px] w-[30px] rounded-full border-2 border-blue-500' src={`http://localhost:5300${user.Avatar}`} alt="" /> <IoMdExit onClick={logoutHandler} className='text-[25px] cursor-pointer' /></div>:''
+          user?.Activated?<div className='flex gap-4 items-center'>{ user.fullName} <img className='h-[30px] w-[30px] rounded-full border-2 border-blue-500' src={`https://codershouse-backend.vercel.app${user.Avatar}`} alt="" /> <IoMdExit onClick={logoutHandler} className='text-[25px] cursor-pointer' /></div>:''
         
           
         }

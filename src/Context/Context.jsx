@@ -11,7 +11,7 @@ function Context(props) {
   const [AuthInfo,setAuthInfo]=useState(null)
   const [fullName,setFullName]=useState('Prem Singh')
   const [rooms,setRooms]=useState([]);
-  const [baseUrl,setBaseUrl]=useState('http://localhost:5300');
+  const [baseUrl,setBaseUrl]=useState('https://codershouse-backend.vercel.app');
   const [singleRoom,setSingleRoom]=useState({});
   const [roomId,setRoomId]=useState('')
   const notify = (status,msg) => toast(msg,{type:status?'success':'error'});
