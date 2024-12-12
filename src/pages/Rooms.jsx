@@ -105,7 +105,7 @@ export const Rooms = () => {
                     <p>{room.name}</p>
                     <div className='mt-[10px]'>
                         <div className='relative'>
-                            <img className='absolute w-[35px] h-[35px] border-2 rounded-full border-[#0077FF]' src={`${baseUrl}${room.speakers[0].Avatar}`} alt="" />
+                            <img className='absolute w-[35px] h-[35px] border-2 rounded-full border-[#0077FF]' src={`${room.speakers[0].Avatar}`} alt="" />
                             {
                                 room.speakers[1]?<img className=' border-2 rounded-full border-[#20BD5F] absolute w-[35px] h-[35px] top-[20px] z-[10] left-[10px]' src="/lest5.png" alt="" />:''
                             }

@@ -28,8 +28,9 @@ export default function Verified() {
         return;
       }
 
-        verifyOtp(OtpRef.current.value,AuthInfo.phone,AuthInfo.hash)
+        verifyOtp(OtpRef.current.value,AuthInfo.email,AuthInfo.hash)
         .then((success)=>{
+          console.log(success)
               setUser(success.data.user);
                   if (registerNumber < 1) {
                     setRegisterNumber(registerNumber + 1);

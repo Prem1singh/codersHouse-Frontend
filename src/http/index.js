@@ -1,20 +1,20 @@
 import axios, { toFormData } from 'axios'
 import { useId } from 'react';
 const api = axios.create({
-  baseURL: 'https://codershouse-backend.vercel.app/',
+  baseURL: 'http://localhost:5300',
   withCredentials: true,
   headers: {
     'Content-type': 'application/json',
     Accept: 'application/json',
 },
 });
-export const sendOtp = (phone) => api.post('/auth/otp/send', { phone });
+export const sendOtp = (email) => api.post('/auth/otp/send', { email });
 export const profileVerify = (formdata) => api.post('/auth/profile/verify', formdata, {
   headers: {
     'Content-Type': 'multipart/form-data',
   },
 })
-export const verifyOtp = (otp, phone, hash) => api.post('/auth/otp/verify', { phone, otp, hash });
+export const verifyOtp = (otp, email, hash) => api.post('/auth/otp/verify', { email, otp, hash });
 export const getUsers = () => api.post('/user/userInfo/get');
 export const logout = () => api.post('/user/account/logout');
 
@@ -39,7 +39,7 @@ api.interceptors.response.use(
       originalRequest._isRetry = true;
       try {
         await axios.get(
-          `https://codershouse-backend.vercel.app/`,
+          `http://localhost:5300/auth/token/refresh`,
           {
             withCredentials: true,
           }

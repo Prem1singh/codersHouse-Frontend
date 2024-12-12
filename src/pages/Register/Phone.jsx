@@ -10,27 +10,28 @@ function Phone() {
     const [email, setEmail] = useState(true);
     const { registerNumber, setRegisterNumber, setAuthInfo, notify } = useContext(context);
     const PhoneRef = useRef();
+    const EmailRef=useRef();
 
     function clickHandler() {
         if (registerNumber < 1) {
 
-            if (!PhoneRef.current.value) {
-                notify(0, "Please Enter Mobile Number ");
+            if (!EmailRef.current.value) {
+                notify(0, "Please Enter Email ");
                 return;
             }
-            const result = PhoneRef.current.value - 1;
+            // const result = EmailRef.current.value - 1;
 
 
-            if (!result) {
-                notify(0, "Only Numbers are allowed");
-                return;
-            }
+            // if (!result) {
+            //     notify(0, "Only Numbers are allowed");
+            //     return;
+            // }
 
-            if ((PhoneRef.current.value).length != 10) {
-                notify(0, "Mobile number should be on 10 digit");
-                return;
-            }
-            sendOtp(PhoneRef.current.value)
+            // if ((EmailRef.current.value).length != 10) {
+            //     notify(0, "Mobile number should be on 10 digit");
+            //     return;
+            // }
+            sendOtp(EmailRef.current.value)
                 .then((success) => {
                     console.log(success.data)
                     setAuthInfo(success.data)
@@ -39,7 +40,7 @@ function Phone() {
                     }
 
                     notify(success.data.status, success.data.msg);
-                    PhoneRef.current.value = '';
+                    EmailRef.current.value = '';
 
                 })
                 .catch((err) => {
@@ -69,7 +70,7 @@ function Phone() {
                         <div onClick={() => { setEmail(true) }} className={`p-2 flex items-center justify-center rounded-lg cursor-pointer ${!email ? 'bg-[#262626]' : 'bg-[#0077FF]'}`}><img className='w-[25px]' src="/emailnew.png" alt="" /></div>
                     </div>
                     <div className='mt-6 relative w-[230px] mx-auto  mb-[15px]'>
-                        <input type="email" placeholder='codersgyan@gmail.com' name="" id="" className=' bg-[#262626] px-4 py-1 w-[230px] rounded-lg focus-visible:outline-none' /></div>
+                        <input ref={EmailRef} type="email" placeholder='codersgyan@gmail.com' name="" id="" className=' bg-[#262626] px-4 py-1 w-[230px] rounded-lg focus-visible:outline-none' /></div>
                     <Button onClick={clickHandler}>Next</Button>
                     <p className='mt-[15px] text-[#C4C5C5] text-[12px]'>By entering your number, you’re agreeing to our Terms of Service and Privacy Policy. Thanks!</p>
                 </Card>

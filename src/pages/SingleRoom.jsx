@@ -65,7 +65,7 @@ export const SingleRoom = () => {
                 <div className='flex gap-4 items-center flex-wrap mt-3 mb-6'>{singleRoom?.speakers?.map((sp, i) => {
                     
                     return (
-                        <div key={i} className='flex-col text-center'><div><img className={`w-[70px] h-[70px] border-4 rounded-full  `} style={sp._id==singleRoom.ownerId?{boxShadow:"0px 0px 20px rgba(255, 255, 255, 1)" }:{borderColor: colors[i % colors.length]}} src={`${baseUrl}${sp.Avatar}`} alt="" /></div>{sp.fullName.split(" ")[0]}</div>
+                        <div key={i} className='flex-col text-center'><div><img className={`w-[70px] h-[70px] border-4 rounded-full  `} style={sp._id==singleRoom.ownerId?{boxShadow:"0px 0px 20px rgba(255, 255, 255, 1)" }:{borderColor: colors[i % colors.length]}} src={`${sp.Avatar}`} alt="" /></div>{sp.fullName.split(" ")[0]}</div>
 
                     )
                 })}</div>
@@ -73,7 +73,7 @@ export const SingleRoom = () => {
                     <div className='font-bold my-3'>Other in the Room</div>
                     <div className='flex gap-4 items-center flex-wrap mt-3 mb-6'>{singleRoom?.listners?.map((list, i) => {
                         return (
-                            <div key={i} className='flex-col text-center'><div><img className={`w-[70px] h-[70px] border-4 rounded-full`} style={{ borderColor: colors[i % colors.length] }} src={`${baseUrl}${list.Avatar}`} alt="" /></div>{list.fullName.split(" ")[0]}</div>
+                            <div key={i} className='flex-col text-center'><div><img className={`w-[70px] h-[70px] border-4 rounded-full`} style={{ borderColor: colors[i % colors.length] }} src={`${list.Avatar}`} alt="" /></div>{list.fullName.split(" ")[0]}</div>
                         )
                     })}</div>
                 </div>
